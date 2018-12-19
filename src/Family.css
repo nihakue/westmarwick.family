@@ -1,0 +1,30 @@
+.family {
+    padding: 10px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.family > * {
+    margin: 10px;
+}
+.spinner {
+  display: block;
+  height: 2em;
+  width: 2em;
+  border: 4px solid lightblue;
+  border-top-color: rgba(0, 174, 239, 0.8);
+  border-radius: 50%;
+  animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
