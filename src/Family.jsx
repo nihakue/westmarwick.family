@@ -1,23 +1,31 @@
 import React from 'react';
 
 import './Family.css';
-import { ReactComponent as Dad } from './Dad.svg';
-import { ReactComponent as Mom } from './Mom.svg';
+import { ReactComponent as MaleSymbol } from './Male.svg';
+import { ReactComponent as FemaleSymbol } from './Female.svg';
 
 export default function Family() {
     return (<section className="family">
-    <Mom color="pink" />
-    <Dad color="lightblue"/>
+    <Female />
+    <Male />
     <Baby born={false}/>
     <Baby born={false}/>
     </section>)
+}
+
+function Male(props) {
+    return <MaleSymbol color="lightblue" {...props} />
+}
+
+function Female(props) {
+    return <FemaleSymbol color="pink" {...props} />
 }
 
 function Baby({born}) {
     if (!born) {
         return <Spinner />
     }
-    return <Dad color="lightblue" width="50px" />
+    return <Male color="lightblue" width="50px" />
 }
 
 function Spinner() {
