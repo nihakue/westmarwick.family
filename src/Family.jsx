@@ -8,8 +8,8 @@ export default function Family() {
     return (<section className="family">
     <Female />
     <Male />
-    <Baby born={false}/>
-    <Baby born={false}/>
+    <Baby born={true}/>
+    <Baby born={true}/>
     </section>)
 }
 
