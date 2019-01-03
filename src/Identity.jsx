@@ -34,8 +34,9 @@ export default function SecretAuthWrapper({children}) {
     const { open } = useAuth();
     const [numClicks, setNumClicks] = useState(0);
 
-    if (numClicks > 10) {
+    if (numClicks > 9) {
         open();
+        setNumClicks(0);
     }
 
     return <div onClick={() => setNumClicks(numClicks + 1)}>{children}</div>
