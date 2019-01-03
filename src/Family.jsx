@@ -29,5 +29,5 @@ function Baby({born}) {
 }
 
 function Spinner() {
-    return <div class="spinner" />
+    return <div className="spinner" />
 }
