@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Family from './Family';
 import './App.css';
 import SecretAuthWrapper from './Identity';
-import Toggle from './Toggle';
+import Toggle from './BornControl';
 
 class App extends Component {
   render() {

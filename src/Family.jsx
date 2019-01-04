@@ -3,13 +3,15 @@ import React from 'react';
 import './Family.css';
 import { ReactComponent as MaleSymbol } from './Male.svg';
 import { ReactComponent as FemaleSymbol } from './Female.svg';
+import { useBorn } from './api';
 
 export default function Family() {
+    const born = useBorn();
     return (<section className="family">
     <Female />
     <Male />
-    <Baby born={false}/>
-    <Baby born={false}/>
+    <Baby born={born}/>
+    <Baby born={born}/>
     </section>)
 }
 
