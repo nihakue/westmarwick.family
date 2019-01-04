@@ -21,7 +21,7 @@ export function useBorn() {
         async function pollBorn() {
             const born = await getBorn();
             setBornState(born);
-            timer = window.setTimeout(pollBorn, 6000);
+            timer = window.setTimeout(pollBorn, 60000);
         }
         pollBorn();
         return () => {
